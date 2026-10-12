@@ -27,18 +27,10 @@ jobs:
         pip install --upgrade pip
         pip install buildozer cython
 
-    - name: Install Android SDK & Accept Licenses
+    - name: Accept Android SDK Licenses & Build
       run: |
         mkdir -p ~/.android
         touch ~/.android/repositories.cfg
-        # Pre-instalar Command Line Tools y aceptar licencias del SDK
-        sudo apt-get install -y android-sdk
-        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
-        yes | sdkmanager --licenses 2>/dev/null || true
-
-    - name: Build APK with Buildozer
-      run: |
-        # Forzar la aceptación implícita enviando respuestas 'y' continuas
         yes | buildozer -v android debug
 
     - name: Upload APK Artifact
