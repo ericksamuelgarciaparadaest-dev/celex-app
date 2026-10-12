@@ -4,6 +4,23 @@ package.name = celexapp
 package.domain = org.celex
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
+# (int) Target Android API, should be 33
+android.api = 33
+
+# (int) Minimum API supported
+android.minapi = 21
+
+# (str) Android NDK version to use
+android.ndk = 25b
+
+# (str) Android NDK API to use
+android.ndk_api = 21
+
+# (bool) Accept SDK license automatically
+android.accept_sdk_license = True
+
+# (list) List of inclusions
+requirements = python3,kivy,kivymd,pg8000
 
 version = 0.1
 requirements = python3,kivy==2.3.1,kivymd==2.0.0,psycopg2-binary,requests,certifi,urllib3
