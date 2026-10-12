@@ -25,10 +25,12 @@ jobs:
           zip unzip openjdk-17-jdk autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev \
           libreadline-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev tk-dev
         pip install --upgrade pip
-        pip install buildozer cython
+        pip install "cython==0.29.33" buildozer
 
     - name: Accept Android SDK Licenses & Build
       run: |
+        mkdir -p ~/.android
+        touch ~/.android/repositories.cfg
         yes | buildozer -v android debug
 
     - name: Upload APK Artifact
