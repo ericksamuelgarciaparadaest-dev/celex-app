@@ -17,7 +17,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Application requirements
 # NOTA: Usamos pg8000 (Python puro) en lugar de psycopg2 para evitar errores de compilación C en Android
-requirements = python3,kivy,kivymd,pg8000
+requirements = python3,kivy==2.3.0,kivymd,pg8000,cython==0.29.33
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirement with recipes
