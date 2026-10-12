@@ -11,10 +11,10 @@ requirements = python3,kivy==2.3.1,kivymd==2.0.0,psycopg2-binary,requests,certif
 orientation = portrait
 fullscreen = 0
 
-android.permissions = INTERNET, ACCESS_NETWORK_STATE
 android.api = 33
 android.minapi = 21
-android.ndk = 25b
+android.sdk_build_tools_version = 33.0.2
+android.accept_sdk_license = True
 android.archs = arm64-v8a
 
 [buildozer]
